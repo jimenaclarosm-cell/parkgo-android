@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Barra superior -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2196F3"
+        app:titleTextColor="#FFFFFF"/>
+
+    <!-- Contenido con scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Tarjeta principal del garaje -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Nombre del garaje -->
+                    <TextView
+                        android:id="@+id/txtNombreGaraje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del garaje"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A237E"/>
+
+                    <!-- Dirección -->
+                    <TextView
+                        android:id="@+id/txtDireccionGaraje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dirección"
+                        android:textSize="15sp"
+                        android:textColor="#757575"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Precio -->
+                    <TextView
+                        android:id="@+id/txtPrecioGaraje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bs. 5 / hora"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"/>
+
+                    <!-- Horario -->
+                    <TextView
+                        android:id="@+id/txtHorarioGaraje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Horario: 07:00 - 22:00"
+                        android:textSize="15sp"
+                        android:textColor="#424242"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- Capacidad total -->
+                    <TextView
+                        android:id="@+id/txtCapacidadGaraje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20 espacios en total"
+                        android:textSize="15sp"
+                        android:textColor="#424242"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Espacios disponibles -->
+                    <TextView
+                        android:id="@+id/txtDisponiblesGaraje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15 espacios disponibles"
+                        android:textSize="15sp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botón Ver en Google Maps -->
+            <Button
+                android:id="@+id/btnVerMapa"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="VER EN GOOGLE MAPS"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:backgroundTint="#FF5722"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Botón Reservar -->
+            <Button
+                android:id="@+id/btnReservar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="RESERVAR ESPACIO"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:backgroundTint="#2196F3"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Barra superior -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2196F3"
+        app:titleTextColor="#FFFFFF"/>
+
+    <!-- Contenido con scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Tarjeta de información del garaje -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Garaje ParkGo - Centro"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A237E"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Precio: Bs. 5 / hora"
+                        android:textSize="15sp"
+                        android:textColor="#4CAF50"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Horario: 07:00 - 22:00"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tarjeta de selección de fecha y hora -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Título -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona tu reserva"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A237E"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Fecha seleccionada -->
+                    <TextView
+                        android:id="@+id/txtFechaSeleccionada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha: No seleccionada"
+                        android:textSize="15sp"
+                        android:textColor="#424242"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Botón seleccionar fecha -->
+                    <Button
+                        android:id="@+id/btnSeleccionarFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="SELECCIONAR FECHA"
+                        android:textSize="14sp"
+                        android:backgroundTint="#2196F3"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Hora de entrada -->
+                    <TextView
+                        android:id="@+id/txtHoraEntrada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Entrada: No seleccionada"
+                        android:textSize="15sp"
+                        android:textColor="#424242"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Botón hora entrada -->
+                    <Button
+                        android:id="@+id/btnHoraEntrada"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="SELECCIONAR HORA DE ENTRADA"
+                        android:textSize="14sp"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Hora de salida -->
+                    <TextView
+                        android:id="@+id/txtHoraSalida"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Salida: No seleccionada"
+                        android:textSize="15sp"
+                        android:textColor="#424242"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Botón hora salida -->
+                    <Button
+                        android:id="@+id/btnHoraSalida"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="SELECCIONAR HORA DE SALIDA"
+                        android:textSize="14sp"
+                        android:backgroundTint="#FF5722"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Costo total -->
+                    <TextView
+                        android:id="@+id/txtCostoTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Costo total: Bs. 0.00"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A237E"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botón Confirmar Reserva -->
+            <Button
+                android:id="@+id/btnConfirmarReserva"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="CONFIRMAR RESERVA"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#2196F3"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
